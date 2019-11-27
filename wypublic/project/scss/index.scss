@@ -1,0 +1,260 @@
+$f12:12px;
+$f14:14px;
+$f16:16px;
+$indexColor:#49af4f;
+$wy_gray:#333;
+.header_r1:first-child{
+  .breadcrumb .breadcrumb-item a{
+     font-size:$f14;
+   }
+}
+body{
+  background: #fff;
+}
+.logo img{
+  width: 12.625rem;
+  height: 3.44rem;
+}
+
+
+.info{
+  .breadcrumb-item + .breadcrumb-item::before{
+    content: "";
+  }
+  .breadcrumb{
+    background: transparent;
+  }
+  .breadcrumb-item a img{
+    vertical-align: middle;
+  }
+  .circle_img>a{
+    display: inline-block;
+    overflow: hidden;
+      border-radius: 50%;
+  }
+  a{
+    color:#333;
+    text-decoration: none;
+    &:hover{
+      color: $indexColor;
+    }
+  }
+}
+
+.header_r1 .col-sm-12:nth-child(2),.row .col-sm-12:last-child{
+  margin-top: 0.5rem;
+}
+
+
+.log::before{
+  content:"";
+  display: inline-block;
+  margin-right: 13px;
+  vertical-align: middle;
+  width: 3px;
+  background: #ccc;
+}
+
+
+ul.wy_nav li{
+  position: relative;
+}
+
+ul.wy_nav>li:hover{
+  a.menu{
+    color:$indexColor !important;
+    text-decoration: none;
+    &::before{
+      content:'';
+      width: 24%;
+      height: 3px;
+      background: $indexColor;
+      border-radius: 2px;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      margin-left: -12px;
+    }
+  }
+}
+.wynav_active{
+  &::before{
+    content:'';
+    width: 24px;
+    height: 3px;
+    background: $indexColor;
+    border-radius: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -24px;
+  }
+  a {
+    text-decoration: none;
+    color:$indexColor !important;
+  }
+}
+
+
+.dropdown-menu{
+  top: 80%;
+  left: 6px;
+  min-width: 100px;
+}
+.fenlei_hover:hover .dropdown-menu{
+  display: block;
+}
+
+.fenlei_hover .dropdown-menu li:hover  a{
+  color:#000 !important;
+}
+
+.wy_mav_r{
+  a:hover{
+    text-decoration: none;
+    color:$indexColor !important;
+  }
+}
+
+.app{
+  position: relative;
+  .app_box{
+    display: none !important;
+    position: absolute;
+    left: -7.94rem;
+    top: 2.19rem;
+    width: 22rem;
+  }
+  &:hover .app_box{
+    display: block !important;
+  }
+}
+
+//主页-"更多" 背景图样式
+.more{
+  width: 1.125rem;
+  height: 1.125rem;
+  background:url(../../img/index/sprite.png) no-repeat -1px -1674px;
+}
+.live_more:hover {
+  .more{background:url(../../img/index/sprite.png) no-repeat -1px -1691px;}
+  span{
+    color:$indexColor !important;
+  }
+}
+//微专业
+//设置标题的字体大小
+.f_size_1{
+  font-size: 1rem;
+}
+//设置微专业的过渡
+.wei_card .card img{
+  transition: all .5s;
+}
+//设置秒杀的字体大小
+.kill_title1{
+  font-size:0.875rem;
+}
+//设置秒杀的导航样式 - 重写导航链接的样式!
+.kill-nav .nav-item .nav-link{
+  border-radius: 0 !important;
+}
+//设置选中状态的样式
+.kill-nav .active{
+  background:$indexColor !important;
+}
+.kill-nav a{
+  font-size: 0.875rem;
+  color:#666;
+  background:rgba(73,175,79,0.1);
+  &:hover{
+    background:$indexColor !important;
+    color:white;
+  }
+}
+
+//射中兴趣爱好
+.like_change::after{
+  content:'>';
+  margin-left: .3rem;
+}
+//设置巨幕背景色
+.like_bg{
+  background: rgba(73, 175, 79, 0.1) !important;
+}
+.like_title{
+  font-size: 0.875rem !important;
+}
+.scries{
+  width: 85%;height: 50%;
+  top:25%;
+  left: 0;
+  right: 0;
+  bottom:0;
+  margin:auto;
+  border:3px solid #ffffff;
+  padding: 1px;
+}
+
+.scries_inner{
+  &::before{
+    content:"";
+    display: table;
+  }
+  height: 100%;
+  background: rgba(255,255,255,0.9) !important;
+  h3{
+    font-size: 1.125rem;
+  }
+}
+
+//登录模态框样式
+.login.modal{
+  width: 27.5rem;
+  margin: auto !important;
+  .modal-body a{
+    color:#aaa !important;
+  }
+  .modal-body .nav .active{
+    color:#000 !important;
+    border-bottom:2px solid #49af4f !important;
+  }
+  //设置背景图
+  .mess_link{
+    padding:0 0 0 34px;
+    background:url(../../img/index/login1.png) no-repeat -380px -385px;
+  }
+  .nav .nav-item{
+    font-size:1.25rem;
+  }
+  .u_logo_img{
+    padding-top:0.69rem;
+    width: 2.25rem;
+    height: 2.75rem;
+  }
+  .phone_logo{
+    width: 1.2rem;
+    height: 2rem;
+    background:url(../../img/index/login1.png) no-repeat 0 -78px;
+  }
+}
+
+//登录页面的 底部背景图片插入
+.login_bgimg{
+  background: url(../../img/index/login03.png);
+}
+//设置自动登录样式
+.logininfor::after{
+  content:'|';
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+
+.fenlei_hover:hover .dropdown_menu{
+  display: block;
+  z-index: 1000;
+  left: 5px;
+}
+
+

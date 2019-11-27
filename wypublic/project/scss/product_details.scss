@@ -1,0 +1,148 @@
+$indexColor:#0aa1ed;
+.pro_nb.breadcrumb .breadcrumb-item{
+  +.breadcrumb-item:before{
+    content: '>';
+  }
+  a{
+    color: #000;}
+  font-weight: 600;
+}
+
+.over_hid{
+  overflow: hidden;
+  img {
+    transition: all 1s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.pro_sm_img li{
+  width: 5.25rem;
+  height: 5.25rem;
+  background: #fff;
+  img{
+    transition: all 1s;
+    &:hover{
+      transform: scale(0.9)
+    }
+  }
+  &:hover{border:1px solid #ccc}
+}
+.f34{font-size: 2.13rem;}
+.text_normal{font-size:0.937rem;}
+
+.specifica{
+  width: 90%;
+}
+.btn-outline-primary{
+  border-radius: 0;
+  border: 1px solid rgb(102,102,102);
+  color: rgb(102,102,102);
+  &:hover{
+    color:$indexColor;
+    background: transparent;
+    border-color: $indexColor;
+  }
+}
+.delt_active {
+  border: 2px solid $indexColor !important;
+}
+
+.px_12{
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.pro_count{
+  button{
+    cursor: pointer;
+  }
+  input{
+    width: 2.6rem;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+  }
+}
+.shops{
+  height: 3.25rem;
+  button.btn{border-radius: 2px;}
+  button:first-child{
+    border-color:#e0e0e0;
+    color:$indexColor;
+    &hover{
+      background:#bbb;
+    }
+  }
+  button:nth-child(2){
+    &.btn-primary{
+      background:-webkit-linear-gradient(top, #27b0f6 0%, #0aa1ed 100%);
+      border-color: $indexColor;
+    }
+  }
+  a{
+    height: 100%;
+    width: 3.5rem;
+    text-align: center;
+    background:$indexColor !important;
+    span{color:white; }
+    img{
+      margin: 0 auto;
+    }
+  }
+}
+
+
+.recommand{
+  .re_label{
+    background:#000;
+    color: #fff;
+  }
+  .carousel_media{
+    border: 1px solid #ccc;
+    overflow: hidden;
+    ul>li{
+      width: 240px;
+      height: 180px;
+      .card{
+        height: 100%;
+        .card-body{height: 100%}
+        .card-footer{height:50%;}
+      }
+    }
+  }
+}
+
+
+
+
+.detail_title a{
+  color: #000;
+  text-decoration: none;
+
+}
+.dt_active{
+  border-bottom: 3px solid $indexColor;
+}
+
+.detailss{
+  ul>li{
+    width: 30%;
+    display: inline-block;
+  }
+  &.jumbotron{
+    background:transparent;
+  }
+}
+
+
+
+
+
+
+
+
+
+

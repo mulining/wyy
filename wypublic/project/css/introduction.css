@@ -1,0 +1,119 @@
+body {
+  font-family: "Arial","Hiragino Sans GB", \5fae\8f6f\96c5\9ed1, "Helvetica", "sans-serif"; }
+
+.top_bread .breadcrumb .breadcrumb-item + .breadcrumb-item:before {
+  content: ">"; }
+
+.text_price28 {
+  font-size: 28px; }
+
+.course_right_info {
+  min-height: 193px; }
+
+.course_top_share {
+  display: flex;
+  height: 28px;
+  background: #fff;
+  overflow: hidden; }
+  .course_top_share a {
+    display: inline-block;
+    width: 48px;
+    height: 28px;
+    background: url(../../img/course/introduction/courseTitle.png) no-repeat; }
+    .course_top_share a:first-child {
+      background-position: -3px -58px; }
+    .course_top_share a:nth-child(2) {
+      background-position: -50px -3px; }
+    .course_top_share a:first-child:hover {
+      background-position: -3px -3px; }
+    .course_top_share a:nth-child(2):hover {
+      background-position: -50px -58px; }
+
+.continued {
+  background: #ff6000;
+  color: white;
+  height: 20px;
+  padding: 0 3px;
+  font-size: 14px;
+  border-radius: 3px; }
+
+.contain .videoimg span {
+  display: inline-block;
+  width: 13px;
+  height: 15px;
+  margin-right: 10px;
+  background: url(../../img/course/introduction/listIcons.png);
+  background-position: -24px -182px; }
+
+ul.contain li {
+  padding: 5px 0; }
+  ul.contain li:after {
+    content: "";
+    display: block;
+    clear: both; }
+
+.course_bottom_info .btn {
+  border-radius: 0;
+  padding-right: 40px;
+  padding-left: 40px; }
+
+.btn-origin {
+  background: #ff8000;
+  color: white; }
+
+.btn-origin:hover {
+  background: #e07000; }
+
+.pingjia .media {
+  position: relative; }
+  .pingjia .media img {
+    width: 49px; }
+  .pingjia .media .media-item {
+    position: absolute;
+    left: -64;
+    margin-left: 64px; }
+
+.discussion .discussion-item .discuss-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%; }
+
+.courseNav .nav-pills .nav-link {
+  padding: 0 0.5rem;
+  color: #000; }
+
+.courseNav ul.nav-pills {
+  height: 36px;
+  background: #fafafa;
+  border: 1px solid #eaeaea; }
+
+.courseNav ul.nav-pills li {
+  margin-top: 7px;
+  text-align: center;
+  font-size: 14px; }
+
+.courseNav .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: white;
+  background: #000; }
+
+.courseNav ul > li + li {
+  margin-left: 25px; }
+
+.boxshadow {
+  box-shadow: 0 1px 7px -6px #000; }
+
+.zx_media_img {
+  width: 36px;
+  height: 36px;
+  margin-right: 12px; }
+
+.userItem_img {
+  width: 32px;
+  height: 32px;
+  cursor: pointer; }
+
+.find_more a {
+  color: #666; }
+
+.find_more:hover {
+  background: #ececec; }

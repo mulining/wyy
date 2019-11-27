@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../project/css/bootstrap.css"/>
+    <script src="../project/js/jquery.min.js"></script>
+    <script src="../project/js/popper.min.js"></script>
+    <script src="../project/js/bootstrap.min.js"></script>
+    <script src="../project/js/vue.js"></script>
+    <script src="../project/js/vue-router.js"></script>
+    <script src="../project/js/axios.min.js"></script>
+    <script src="../project/js/config.js"></script>
+    <!-- 引入自己的js功能代码 -->
+    <script src="js/dropmenu.js"></script>
+    <script src="js/headerX.js"></script>
+    <script src="js/navheader.js"></script>
+    <script src="js/footer.js"></script>
+    <link rel="stylesheet" href="../project/css/comm.css"/>
+    <link rel="stylesheet" href="../project/css/footer.css">
+    <link rel="stylesheet" href="../project/css/dropmenu.css">
+</head>
+<body>
+<div id="app">
+  <header-menu></header-menu>
+  <div class=""></div>
+  <!-- 面包屑导航 -->
+  <div class="wysearch_nav tab py-3">
+    <ul class="breadcrumb py-5 ">
+      <li class="breadcrumb-item">首页</li>
+      <li class="breadcrumb-item">搜索结果</li>
+    </ul>
+  </div>
+  <wyfooter></wyfooter>
+</div>
+<script>
+var vm=new Vue({
+  el:"#app",
+  data:{
+    
+  }
+})
+</script>
+</body>
+</html>

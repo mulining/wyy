@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../project/css/comm.css"/>
+  <script src="../project/js/vue.js"></script>
+  <style>
+    .alertBox{
+      position:absolute;
+      right: -3px;
+      top: 44px;
+      background: #fff;
+    }
+    .alertBox ul{
+      width: 150px;
+      padding: 5px;
+    }
+    .alertBox ul li{
+      padding: 5px 8px;
+      cursor: pointer;
+    }
+    .alertBox ul li a{
+      color: #000;
+      font-size: 12px;
+    }
+    .alertBox ul li:first-child,.alertBox ul li:nth-child(5){
+      border-bottom: 1px solid #eee;
+    }
+    .alertBox ul li>span{
+      color: #ff9600;/*金黄色*/
+      font-size: 12px;
+    }
+    .alertBox ul li:nth-child(2){
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      overflow: hidden;
+    }
+    
+    .alertBox ul li:hover{
+      background: rgba(204, 204, 204, 0.1);
+    }
+    .cricle{
+      position: absolute;
+      right:30px;
+      top: 10px;
+      width: 50px;
+      height: 30px;
+      border: 2px solid #000;
+      border-radius: 50%;
+      background: #ccc;
+    }
+    div.cricle:hover .alertBox{
+      display: block;
+      transform: scale(1.1);
+    }
+    /* 三角制作 */
+    .alertBox .sj{
+      position: absolute;
+      top: -10px;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-top: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-bottom: 5px solid;
+      border-left: 5px solid transparent;
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+  <div class="cricle"></div>
+
+  <div class="alertBox">
+    <div class="sj"></div>
+    <ul>
+        <li><a href="javascript:;">游客,请登录</a></li>
+        <li><a href="javascript:;">我的优惠券</a><span>兑换</span></li>
+        <li><a href="javascript:;">我的订单</a></li>
+        <li><a href="javascript:;">帮助与反馈</a></li>
+        <li><a href="javascript:;">设置</a></li>
+        <li><a href="javascript:;">退出</a></li>
+    </ul>
+  </div>
+</div>
+<script>
+var vm=new Vue({
+  el:"#app",
+  data:{
+    
+  }
+})
+</script>
+</body>
+</html>

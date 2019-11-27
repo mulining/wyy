@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>个人认证-主页-网易云课堂</title>
+  <link rel="stylesheet" href="../project/css/bootstrap.css"/>
+    <script src="../project/js/jquery.min.js"></script>
+    <script src="../project/js/popper.min.js"></script>
+    <script src="../project/js/bootstrap.min.js"></script>
+    <script src="../project/js/vue.js"></script>
+    <script src="../project/js/vue-router.js"></script>
+    <script src="../project/js/axios.min.js"></script>
+    <script src="../project/js/config.js"></script>
+    <!-- 引入自己的js功能代码 -->
+    <script src="js/dropmenu.js"></script>
+    <script src="js/headerX.js"></script>
+    <script src="js/navheader.js"></script>
+    <script src="js/footer.js"></script>
+    <link rel="stylesheet" href="../project/css/comm.css"/>
+    <link rel="stylesheet" href="../project/css/user.css">
+    <link rel="stylesheet" href="../project/css/footer.css">
+    <link rel="stylesheet" href="../project/css/dropmenu.css">
+</head>
+<body>
+<div id="app">
+  <header-menu></header-menu>
+  <!-- 个人主页顶部默认背景 -->
+  <div class="user">
+    <!-- 用户头像信息 头像-headPortrait-->
+    <div class="headPortrait">
+      <div class="userInfo text-center">
+        <img :src="userimg">
+        <p v-text="nickname"></p>
+        <a href="javascript:;" @click="toEdit">编辑我的资料</a>
+      </div>
+    </div>
+    <!-- 单个大图 -->
+    <div class="user_bg_img2"></div>
+  </div>
+
+  <wyfooter></wyfooter>
+</div>
+<script>
+var vm=new Vue({
+  el:"#app",
+  data:{
+    nickname:"user123",
+    userimg:"../img/edu-image/small.jpg",//默认图片
+    isLogin:false
+  },
+  created() {
+    this.userdata()
+  },
+  methods: {
+    // 当加载组件时,请求用户数据
+    userdata(){
+      axios.defaults.baseURL=config.baseUrl;
+      var url= "/wyuser/indexUser";
+      axios.get(url)
+        .then(res=>{
+            if(res.data.code == 1){
+                // 登录成功
+                this.isLogin = true;
+                var nickname = res.data.data[0].unickname;
+                var userimg = res.data.data[0].img;
+                if(nickname){
+                    this.nickname = nickname;
+                }
+                if(userimg){
+                    this.userimg = userimg;
+                }
+            }else{
+                this.isLogin = false;
+                alert("未登录,请先登录再访问!");
+                window.location.href = "index.html";
+            }
+        })
+        .catch(err=>{
+            console.log(err);
+        });
+    },
+    // 调转到编辑页面
+    toEdit(){
+      window.location.href = "setting.html";
+    }
+  },
+})
+</script>
+</body>
+</html>

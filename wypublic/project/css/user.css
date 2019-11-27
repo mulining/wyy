@@ -1,0 +1,36 @@
+.user {
+  width: 100%;
+  height: auto;
+  padding-top: 60px; }
+
+.user .headPortrait {
+  width: 100%;
+  height: 200px;
+  background: url(../../img/user/common/user_index_topback.png) no-repeat; }
+  .user .headPortrait:before {
+    content: '';
+    display: table; }
+  .user .headPortrait .userInfo {
+    width: 88px;
+    height: 88px;
+    margin: 30px auto;
+    font-weight: 400; }
+    .user .headPortrait .userInfo img {
+      width: 100%;
+      border-radius: 50%;
+      border: 4px solid rgba(236, 236, 236, 0.6); }
+    .user .headPortrait .userInfo p {
+      color: white;
+      font-size: 22px;
+      margin-top: 5px;
+      margin-bottom: 0px; }
+    .user .headPortrait .userInfo a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px; }
+
+.user .user_bg_img2 {
+  width: 1205px;
+  height: 400px;
+  margin: 50px auto 100px;
+  background: url(../../img/user/common/user_bg_img2.png) no-repeat; }

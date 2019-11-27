@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../project/css/bootstrap.css"/>
+  <link rel="stylesheet" href="../project/css/comm.css"/>
+  <link rel="stylesheet" href="../project/css/dropmenu.css">
+  <link rel="stylesheet" href="../project/css/introduction.css">
+  <script src="../project/js/jquery.min.js"></script>
+  <script src="../project/js/popper.min.js"></script>
+  <script src="../project/js/bootstrap.min.js"></script>
+  <script src="../project/js/vue.js"></script>
+  <!-- 注意先引入子组件 -->
+  <script src="js/dropmenu.js"></script>
+  <script src="js/headerX.js"></script>
+  <script src="js/footer.js"></script>
+</head>
+<body>
+<div id="app">
+  <!-- 课程详情页面-仅支持pc端 -- width=1205px min-width=1205px -->
+  <!-- 顶部导航栏使用headerX.js组件 -->
+  <header-menu></header-menu>
+  <!-- 内容使用一个样式类.tab固定宽度 -->
+  <!-- 顶部紧挨着下面是一个面包屑导航 -->
+  <div class="top_bread w-100 mt-60 py-2">
+    <ul class="breadcrumb tab bg-transparent text_small">
+      <li class="breadcrumb-item"><a href="javascript:;" class="text-muted">首页</a></li>
+      <li class="breadcrumb-item"><a href="javascript:;" class="text-muted">编程与开发</a></li>
+      <li class="breadcrumb-item"><a href="javascript:;" class="text-muted">编程语言</a></li>
+      <li class="breadcrumb-item"><a href="javascript:;" class="text-muted">c++</a></li>
+      <li class="breadcrumb-item"><a href="javascript:;" class="link_disabled">课程详情</a></li>
+    </ul>
+  </div>
+  <!-- 课程概述 -->
+  <div class="course_header tab">
+    <!-- 这里使用媒体 -->
+    <div class="media p-3 bg-white ">
+      <!-- 左侧大图 -->
+      <img src="../img/course/introduction/c1_liaokepython_top.png" class="">
+      <!-- <div class="w-50">
+        <video src="../img/course/introduction/python.mp4" class="w-100"></video>
+      </div> -->
+      <!-- 右侧文字内容 -->
+      <div class="media-body ml-3">
+        <!-- 上半部分 -->
+        <div class="course_right_info d-flex justify-content-between">
+          <div class="">
+            <h4>c++从入门到精通 c++11/14/17</h4>
+            <!-- 标题下边的内容 -->
+            <div class="d-flex text_small">
+              <span class="text-muted mr-3">544人学过</span>
+              <!-- 五星好评 -->
+              <span></span>
+              <div class="d-flex justify-content-start ml-2">
+                <div>讲师:</div>
+                <div class="cursor_pointer ml-2">KuangXiang</div>
+              </div>
+            </div>
+            <!-- 价格 -->
+            <p class="text_price28">¥&nbsp;498.00</p>
+          </div>
+          <div class="course_top_share">
+            <a href="javascript:;" title="分享"></a>
+            <a href="javascript:;" title="加入收藏"></a>
+          </div>
+        </div>
+        <!-- 下半部分,立即参加和加入购物车两个按钮 -->
+        <div class="course_bottom_info mt-3">
+          <button class="btn btn-origin btn-lg">立即参加</button>
+          <a href="javascript:;" class="indexcolor ml-3 text_small font-weight-bold">加入购物车</a>
+        </div>
+      </div>
+    </div>
+    <!-- 课程概述的底部导航栏 -->
+    <div class="courseNav">
+      <!-- 导航栏 -->
+      <ul class="course_nav_pills nav nav-pills">
+        <li class="nav-item ml-3"><a href="#tab1" class="nav-link active" data-toggle="pill">介绍</a></li>
+        <li class="nav-item"><a href="#tab2" class="nav-link" data-toggle="pill">目录</a></li>
+        <li class="nav-item"><a href="#tab3" class="nav-link" data-toggle="pill">笔记</a></li>
+        <li class="nav-item"><a href="#tab4" class="nav-link" data-toggle="pill">讨论区</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 课程介绍/目录/笔记/讨论区 -->
+  <div class="course_info tab mt-3 d-flex mb-5">
+    <!-- 左侧 -->
+    <div class="tab-content w-75">
+      <!-- 页面一 -->
+      <div id="tab1" class="tab-pane active">
+          <div class="wyinfo bg-white p-3 boxshadow">
+              <h5>适用人群</h5>
+              <p class="text_normal">1.&nbsp;具备面向对象基础；<br>2.&nbsp;具备包和模块基础；<br>3.&nbsp;如果不具备，请网易云课堂搜索“王顺子”关键字</p>
+              <h5>课程概述</h5>
+              <div class="text-muted">
+                ----------------（1）-----------------<br>《实战阶段》系列课，更加优惠<br>地址如下：<br>&gt;&nbsp;Python-GUI系列：<br>&nbsp;&nbsp;&nbsp;&nbsp;https://dwz.cn/FhIZAZ8V<br>&gt;&nbsp;Python-爬虫系列：<br>&nbsp;&nbsp;&nbsp;&nbsp;https://dwz.cn/jNm8IBd4<br><br>----------------（2）-----------------<br>如需交流或资料下载：<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请添加QQ群：<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;报名后查看私信<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;顺子老师微信：<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;itlike-sz
+              </div>
+              <!-- 大图讲解区 -->
+              <div class="course_img_info">
+                <div>
+                  <img src="../img/course/introduction/c1_liaokepython_inf1.webp" class="w-100">
+                </div>
+                <div>
+                  <img src="../img/course/introduction/c1_liaokepython_inf2.webp" class="w-100">
+                </div>
+              </div>
+          </div>
+      </div>
+      <!-- 页面二 目录-->
+      <div id="tab2" class="course_list tab-pane">
+        <div class="wyinfo bg-white boxshadow">
+          <!-- 头部 -->
+          <div class="d-flex justify-content-between align-items-center border-bottom p-3">
+            <h5>目录</h5>
+            <div class="continued">连载</div>
+          </div>
+          <!-- 内容 -->
+          <ul class="contain px-3">
+            <li>
+              <span>章节一:</span>
+              <span>系统化2000+连载/逐行代码细致讲解/大量拓展</span>
+            </li>
+            <li>
+              <span class="float-left text-muted">课时1:</span>
+              <span class="float-left ml-4">2019-2020最新版2000+课程正在连载更新</span>
+              <span class="videoimg float-right text-muted text_small"><span></span>01:54</span>
+            </li>
+            <li>
+              <span class="float-left text-muted">课时2:</span>
+              <span class="float-left ml-4">2019-2020最新版2000+课程正在连载更新</span>
+              <span class="videoimg float-right text-muted text_small"><span></span>01:54</span>
+            </li>
+            <li>
+              <span class="float-left text-muted">课时3:</span>
+              <span class="float-left ml-4">2019-2020最新版2000+课程正在连载更新</span>
+              <span class="videoimg float-right text-muted text_small"><span></span>01:54</span>
+            </li>
+            <li>
+              <span class="float-left text-muted">课时4:</span>
+              <span class="float-left ml-4">2019-2020最新版2000+课程正在连载更新</span>
+              <span class="videoimg float-right text-muted text_small"><span></span>01:54</span>
+            </li>
+            <li>
+              <span class="float-left text-muted">课时5:</span>
+              <span class="float-left ml-4">2019-2020最新版2000+课程正在连载更新</span>
+              <span class="videoimg float-right text-muted text_small"><span></span>01:54</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- 页面三 笔记-->
+      <div id="tab3" class="tab-pane">
+        <div class="wyinfo bg-white p-3 boxshadow">
+          <!-- 头部 -->
+            <div class="d-flex justify-content-between align-items-center border-bottom p-3">
+              <h5>笔记</h5>
+              <div class="text_small d-flex">
+                <p class="indexcolor mr-2 cursor_pointer hoverColor">最优笔记</p>
+                <p class="text-muted cursor_pointer hoverColor">最新笔记</p>
+              </div>
+            </div>
+            <!-- 内容 -->
+            <!-- 课时 -->
+            <div class="p-3 border-bottom">
+              <button class="btn btn-sm btn-outline-success active mb-2">全部笔记</button>
+              <button class="btn btn-sm btn-outline-success mb-2">课程笔记</button>
+              <button class="btn btn-sm btn-outline-success mb-2">课时1</button>
+              <button class="btn btn-sm btn-outline-success mb-2">课时2</button>
+              <button class="btn btn-sm btn-outline-success mb-2">课时3</button>
+              <button class="btn btn-sm btn-outline-success mb-2">课时4</button>
+              <button class="btn btn-sm btn-outline-success mb-2">课时5</button>
+              <button class="btn btn-sm btn-outline-success mb-2">课时6</button>
+              <button class="btn btn-sm btn-outline-success mb-2">课时7</button>
+              <button class="btn btn-sm btn-outline-success mb-2">课时8</button>
+              <button class="btn btn-sm btn-outline-success mb-2">课时9</button>
+              <button class="btn btn-sm btn-outline-success mb-2">课时10</button>
+              <button class="btn btn-sm btn-outline-success mb-2">课时11</button>
+              <button class="btn btn-sm btn-outline-success mb-2">课时12</button>
+              <button class="btn btn-sm btn-outline-success mb-2">课时13</button>
+              <a href="javascript:;"  class="text-muted text_small d-block">展开更多课时</a>
+            </div>
+            <!-- 学员评价 -->
+            <div class="pingjia px-3 text_small">
+              <!-- 使用模态框 -->
+              <div class="media py-3 border-bottom">
+                <img src="../img/edu-image/big.jpg">
+                <div class="media-body ml-3">
+                  <!-- 分为上下两层 -->
+                  <div class="d-flex justify-content-between">
+                    <h6 class="indexcolor">Bryan</h6>
+                    <span class="">课时26</span>
+                  </div>
+                  <div>
+                    <span class="text-muted">
+                        逻辑运算符：<br>
+                        and 满足前面和后面的两个条件<br>
+                        or   至少满足一个条件<br>
+                        not  翻转布尔值，翻转后面的结果
+                    </span>
+                    <!-- 底部时间 收藏 点赞 -->
+                    <div class="d-flex justify-content-between">
+                      <span>8月12日</span>
+                      <div>
+                        顶(3)&nbsp;评论(0)&nbsp;收藏&nbsp;分享
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="media py-3 border-bottom">
+                  <img src="../img/edu-image/big.jpg">
+                  <div class="media-body ml-3">
+                    <!-- 分为上下两层 -->
+                    <div class="d-flex justify-content-between">
+                      <h6 class="indexcolor">Bryan</h6>
+                      <span class="">课时26</span>
+                    </div>
+                    <div>
+                      <span class="text-muted">
+                          逻辑运算符：<br>
+                          and 满足前面和后面的两个条件<br>
+                          or   至少满足一个条件<br>
+                          not  翻转布尔值，翻转后面的结果
+                      </span>
+                      <!-- 底部时间 收藏 点赞 -->
+                      <div class="d-flex justify-content-between">
+                        <span>8月12日</span>
+                        <div>
+                          顶(3)&nbsp;评论(0)&nbsp;收藏&nbsp;分享
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="media py-3 border-bottom">
+                    <img src="../img/edu-image/big.jpg">
+                    <div class="media-body ml-3">
+                      <!-- 分为上下两层 -->
+                      <div class="d-flex justify-content-between">
+                        <h6 class="indexcolor">Bryan</h6>
+                        <span class="">课时26</span>
+                      </div>
+                      <div>
+                        <span class="text-muted">
+                            逻辑运算符：<br>
+                            and 满足前面和后面的两个条件<br>
+                            or   至少满足一个条件<br>
+                            not  翻转布尔值，翻转后面的结果
+                        </span>
+                        <!-- 底部时间 收藏 点赞 -->
+                        <div class="d-flex justify-content-between">
+                          <span>8月12日</span>
+                          <div>
+                            顶(3)&nbsp;评论(0)&nbsp;收藏&nbsp;分享
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="media py-3 border-bottom">
+                      <img src="../img/edu-image/big.jpg">
+                      <div class="media-body ml-3">
+                        <!-- 分为上下两层 -->
+                        <div class="d-flex justify-content-between">
+                          <h6 class="indexcolor">Bryan</h6>
+                          <span class="">课时26</span>
+                        </div>
+                        <div>
+                          <span class="text-muted">
+                              逻辑运算符：<br>
+                              and 满足前面和后面的两个条件<br>
+                              or   至少满足一个条件<br>
+                              not  翻转布尔值，翻转后面的结果
+                          </span>
+                          <!-- 底部时间 收藏 点赞 -->
+                          <div class="d-flex justify-content-between">
+                            <span>8月12日</span>
+                            <div>
+                              顶(3)&nbsp;评论(0)&nbsp;收藏&nbsp;分享
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+            </div>
+        </div>
+      </div>
+      <!-- 页面四 讨论区-->
+      <div id="tab4" class="tab-pane">
+        <div class="wyinfo bg-white boxshadow">
+          <!-- 头部 -->
+          <div class="border-bottom">
+            <div class="d-flex justify-content-between align-items-center p-3">
+              <h5>讨论区</h5>
+              <div class="text_small d-flex">
+                <p class="indexcolor mr-2 cursor_pointer hoverColor">讨论区使用规则</p>
+              </div>
+            </div>
+            <p class="text-muted text_small p-3">
+                【请注意，若需要教研团队答疑的小伙伴，请勿使用匿名发帖功能，否则不予回复】 讨论区提问请欢迎进入课程讨论区，你可以与本课程的老师和同学在这里交流。如果你有课程相关的问题，请发到老师答疑区；经验、思考、创意、作品、转帖请发到综合讨论区。欢迎分享，鼓励原创，杜绝广告，请大家共同维护一个包容、积极、相互支持的交流氛围，谢谢。了解更多请点击“讨论区使用规则”↗
+            </p>
+          </div>
+          <!-- 内容 讨论-discussion -->
+          <ul class="discussion">
+            <li class="border-bottom">
+              <!-- 学员讨论列表 -->
+              <div class="discussion-item p-3 text_small">
+                <div class="">
+                  <div class="discuss-img float-left"></div>
+                  <span class="float-left">
+                    <a href="javascript:;" class="float-left indexcolor">老酒ykt4662867329127890</a>
+                  </span>
+                  <span class="ml-4 float-left">
+                    <!-- 日期 -->
+                    10月24日
+                  </span>
+                  <span class="float-right">【综合讨论区】</span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 有侧边栏 -->
+    <aside class="ml-3 w-25">
+      <!-- 讲师简介 -->
+      <div class="d-flex flex-column align-items-center bg-white boxshadow">
+          <div class="pt-3">
+            <img src="../img/course/introduction/c1_liaokepython_teacher_md.png">
+            <p class="text-center text_small">王顺子</p>
+          </div>
+          <div class="w-100 border-top border-bottom p-3">
+            <p class="text_small m-0">全栈IT实战，资深IT讲师</p>
+          </div>
+      </div>
+      <!-- 咨询讲师 -->
+      <div class="bg-white boxshadow mt-3">
+          <div class="w-100 border-top border-bottom p-3">
+            <h5 class="m-0">咨询</h5>
+          </div>
+          <!-- 咨询条目 -->
+          <div class="media p-3">
+            <div class="zx_media_img">
+              <img src="../img/course/introduction/c1_liaokepython_teacher_sm.png" class="w-100">
+            </div>
+            <div class="media-item d-flex w-100 justify-content-lg-between">
+              <span class="text_small">王顺子</span>
+              <button class="btn btn-outline-success py-0 px-2 text_small">咨询</button>
+            </div>
+          </div>
+          <!-- 咨询底部信息 -->
+          <p class="text-muted text_small px-3 pb-3">可在此在线咨询关于课程的内容、价格、售前、售后服务等相关信息</p>
+      </div>
+      <!-- 讲师评价 -->
+      <div class="bg-white boxshadow mt-3 text_small text-muted">
+        <!-- 标题 -->
+        <div class="p-3 border-bottom">
+          <h5 class="m-0">评价</h5>
+        </div>
+        <!-- 用户评价显示区域 -->
+        <div class="p-3">
+          <!-- 这里可以使用组件 -->
+          <!-- 组件一 -->
+          <div class="userItem pt-3 mb-3">
+            <div class="media">
+              <!-- 图片 -->
+              <div class="userItem_img mr-2">
+                <img src="../img/course/introduction/user1_sm.jpg" class="w-100">
+              </div>
+              <!-- 文字介绍 -->
+              <div class="">
+                <p class="m-0 indexcolor">时光如梭8</p>
+                <p class="m-0">学习68个课时评价</p>
+              </div>
+              <!-- 五星好评 -->
+              <div></div>
+            </div>
+            <!-- 底部时间 -->
+            <p class="m-0">11月1日</p>
+          </div>
+          <!-- 组件2 -->
+          <div class="userItem pt-3 mb-3">
+              <div class="media">
+                <!-- 图片 -->
+                <div class="userItem_img mr-2">
+                  <img src="../img/course/introduction/user1_sm.jpg" class="w-100">
+                </div>
+                <!-- 文字介绍 -->
+                <div class="">
+                  <p class="m-0 indexcolor">时光如梭8</p>
+                  <p class="m-0">学习68个课时评价</p>
+                </div>
+                <!-- 五星好评 -->
+                <div></div>
+              </div>
+              <!-- 底部时间 -->
+              <p class="m-0">11月1日</p>
+            </div>
+        </div>
+        <!-- 底部查看更多 -->
+        <div class="find_more border-top text-center py-3 cursor_pointer">
+          <a href="javascript:;" class="m-0">查看更多</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+  <wyfooter></wyfooter>
+</div>
+<script>
+var vm=new Vue({
+  el:"#app",
+  data:{
+    
+  }
+})
+</script>
+</body>
+</html>

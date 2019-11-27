@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../project/css/bootstrap.css"/>
+    <script src="../project/js/jquery.min.js"></script>
+    <script src="../project/js/popper.min.js"></script>
+    <script src="../project/js/bootstrap.min.js"></script>
+    <script src="../project/js/vue.js"></script>
+    <script src="../project/js/vue-router.js"></script>
+    <script src="../project/js/axios.min.js"></script>
+    <script src="../project/js/config.js"></script>
+    <!-- 引入自己的js功能代码 -->
+    <script src="js/dropmenu.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/navheader.js"></script>
+    <link rel="stylesheet" href="../project/css/comm.css"/>
+    <link rel="stylesheet" href="../project/css/header.css"/>
+    <link rel="stylesheet" href="../project/css/index.css"/>
+    <link rel="stylesheet" href="../project/css/footer.css">
+    <link rel="stylesheet" href="../project/css/dropmenu.css">
+</head>
+<body>
+  <div id="pageIndex" class="container-fluid">
+    <div id="login" class="login modal">
+        <div class="modal-content">
+            <div class="modal-header pb-0 border-0">
+                <!-- 关闭按钮 -->
+                <span class="close" data-dismiss="modal">&times;</span>
+            </div>
+            <div class="pane1 modal-body py-0">
+                <!-- 导航栏 登录方式(手机/邮箱) -->
+                    <ul class="nav nav-tabs nav-justified">
+                    <li class="nav-item text-muted cursor_pointer"><a href="#login_tab1" class="nav-link active border-0" data-toggle="tab">手机号登录</a></li>
+                    <li class="nav-item text-muted cursor_pointer"><a href="#login_tab2" class="nav-link border-0" data-toggle="tab">邮箱登录</a></li>
+                </ul>
+                <div class="tab-content">
+                    <!-- 手机登录 -->
+                    <!-- 导航 分页 -->
+                    <div id="login_tab1" class="tab-pane active">
+                        <a href="#" class="mess_link mr-3 float-right clear_after text_xm mt-2 text-muted mb-2" onclick="message()">使用短信验证登录</a>
+                        <!-- 手机号 输入框组 -->
+                        <div class="input-group border mb-4">
+                            <span class="u_logo_img d-inline-block">
+                                <span class="phone_logo d-block m-auto"></span>
+                            </span>
+                            <input type="phone" placeholder="请输入手机号" maxlength="11" class="p-0 pl-1 text_small border-0 font-weight-bold login_active">
+                        </div>
+                        <!-- 使用短信验证码验证要显示的滑块 -->
+                        <div class="slideblock" style="display: none;">
+                            <!-- 滑块 -->
+                            <div>向右拖动滑块填充图案</div>
+                        </div>
+                        <!-- 短信验证码 -->
+                        <div class="mymessage" style="display: none;">
+                            <div class="input-group mb-4 row d-flex justify-content-between ml-0">
+                                <input type="text" class="col-7" placeholder="请输入短信验证码" style="font-size: 14px;font-weight: 400;" onfocus="this.style.fontWeight=600;this.maxLength=6" onblur="this.style.fontWeight=400">
+                                <button class="btn btn-outline-success indexcolor col-4">获取验证码</button>
+                            </div>
+                        </div>
+                        
+                        <!-- 密码输入框组 -->
+                        <div class="passblock input-group border mb-4">
+                            <span class="u_logo_img d-inline-block">
+                                <span class="phone_logo d-block m-auto"></span>
+                            </span>
+                            <input type="phone" placeholder="请输入密码" maxlength="11" class="p-0 pl-1 text_small border-0 font-weight-bold">
+                        </div>
+                        <!-- 按钮 -->
+                        <button class="btn btn-block btn-success mb-2">登录</button>
+                        <!-- 底部 - 去注册提示 -->
+                        <p class="m-0 clear_after">
+                            <input type="checkbox" checked id="autoLogin" class="mr-1 float-left mt-1"><label for="autoLogin" class="logininfor text-muted text_xm float-left">十天内免费登录</label><a href="#" class="text-muted text_xm pl-0 float-left">忘记密码</a>
+                            <a href="#" id="a" class="reg text_xm indexcolor float-right" onclick="goto()">去注册&nbsp;></a>
+                        </p>
+                    </div>
+                    <!-- 邮箱登录 -->
+                    <div id="login_tab2" class="tab-pane">
+                        <div class="input-group border mb-4 mt-4">
+                            <span class="u_logo_img d-inline-block">
+                                <span class="phone_logo d-block m-auto"></span>
+                            </span>
+                            <input type="phone" placeholder="网易邮箱/常用邮箱" maxlength="11" class="p-0 pl-1 text_small border-0 font-weight-bold">
+                        </div>
+                        <!-- 密码输入框组 -->
+                        <div class="input-group border mb-4">
+                            <span class="u_logo_img d-inline-block">
+                                <span class="phone_logo d-block m-auto"></span>
+                            </span>
+                            <input type="phone" placeholder="密码" maxlength="11" class="p-0 pl-1 text_small border-0 font-weight-bold">
+                        </div>
+                        <!-- 按钮 -->
+                        <button class="btn btn-block btn-success mb-2">登录</button>
+                        <!-- 底部 - 去注册提示 -->
+                        <p class="m-0 clear_after">
+                            <input type="checkbox" checked id="autoLogin" class="mr-1 float-left mt-1"><label for="autoLogin" class="logininfor text-muted text_xm float-left">十天内免费登录</label><a href="#" class="text-muted text_xm pl-0 float-left">忘记密码</a>
+                        </p>
+                    </div>
+                </div> 
+            </div>
+
+            <!-- 注册页面 -->
+            <div id="abc" class="modal-body reg_pane pb-0" style="display: none;">
+                <h4>手机号注册</h4>
+                <!-- 手机号 输入框组 -->
+                <div class="input-group border mb-4">
+                    <span class="u_logo_img d-inline-block">
+                        <span class="phone_logo d-block m-auto"></span>
+                    </span>
+                    <input type="phone" placeholder="请输入手机号" v-model="phone" onfocus="this.maxLength=11" onblur="this.maxLength=100" class="p-0 pl-1 text_small border-0 font-weight-bold login_active" style="width: 90%;">
+                </div>
+
+                <!-- 密码输入框组 -->
+                <div class="input-group border mb-4">
+                    <span class="u_logo_img d-inline-block">
+                        <span class="phone_logo d-block m-auto"></span>
+                    </span>
+                    <input type="phone" placeholder="请输入密码" v-model="pwd" style="font-size: 14px;font-weight: 400;" onfocus="this.maxLength=11;this.style.fontWeight=600;" onblur="this.maxLength=100" class="p-0 pl-1 text_small border-0 font-weight-bold" style="width: 90%;">
+                </div>
+
+                <!-- 滑块验证 -->
+                <!-- 短信验证码验证 -->
+                <div class="input-group mb-4 row d-flex justify-content-between ml-0">
+                    <input type="text" class="col-7" v-model="message" placeholder="请输入短信验证码" style="font-size: 14px;font-weight: 400;" onfocus="this.style.fontWeight=600;this.maxLength=6" onblur="this.style.fontWeight=400">
+                    <button class="btn btn-outline-success col-4">获取验证码</button>
+                </div>
+
+                 <!--注册页面的的登录按钮  -->
+                 <button class="btn btn-success btn-block btn-lg" :disabled="!isxieyichecked">注册</button>
+                 <!-- 协议确认 以及 去登陆 -->
+                 <div class="xieyi d-flex justify-content-between mt-3" style="font-size: 12px;">
+                    <div @click="lock">
+                        <input type="checkbox" :checked="isxieyichecked" style="color:#aaa;vertical-align: middle;" id="xieyi">
+                        <label for="xieyi" @click="lock" style="color:#aaa;vertical-align: middle;margin-bottom: 1px;margin-bottom: 0;">我同意<a href="javascript:;" style="color:#aaa">《用户使用协议》</a>和<a href="javascript:;" style="color:#aaa">《隐私政策》</a></label>
+                    </div>
+                    <a href="javascript:;" class="indexcolor" onclick="goto()">去登陆&nbsp;></a>
+                 </div>
+            </div>
+            <!-- 底部 -->
+            <div class="modal-footer border-top-0">
+                    <div class="row w-100 m-0">
+                        <div class="col-3 text_small text-muted p-0 text-center mt-4">其他登录方式</div>
+                        <div class="col-9 p-0">
+                            <!-- 弹性布局 -->
+                            <ul class="d-flex justify-content-lg-around">
+                                <li class="pt-3 mx-2 pl-2 cursor_pointer"><img src="../img/index/login01.png" class="w-100"><p class="text-muted text_xm text-center pt-3 mb-0">微信</p></li>
+                                <li class="pt-3 mx-2 cursor_pointer"><img src="../img/index/login02.png" class="w-100"><p class="text-muted text_xm text-center pt-3 mb-0">QQ</p></li>
+                                <li class="pt-3 mx-2 cursor_pointer"><img src="../img/index/login03.png" class="w-100"><p class="text-muted text_xm text-center pt-3 mb-0">微博</p></li>
+                                <li class="pt-3 mx-2 cursor_pointer"><img src="../img/index/login04.png" class="w-100"><p class="text-muted text_xm text-center pt-3 mb-0">人人</p></li>
+                                <li class="pt-3 mx-2 pr-2 cursor_pointer"><img src="../img/index/login05.png" class="w-100"><p class="text-muted text_xm text-center pt-3 mb-0">爱课程</p></li>
+                            </ul>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../project/js/apis/index.js"></script>
+<script src="../project/js/index.js"></script>
+<script src="./js/footer.js"></script>
+<script src="./js/modelLoginReg.js"></script>
+<script src="../project/css/reg_pane.css"></script>
+</body>
+</html>

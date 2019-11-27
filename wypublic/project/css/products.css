@@ -1,0 +1,143 @@
+.pr_title {
+  height: 2.37rem; }
+  .pr_title h6 {
+    line-height: 2.37rem; }
+
+.pr_size {
+  font-size: 1.1rem;
+  font-weight: 600; }
+
+.p_lineh {
+  line-height: 20px; }
+
+.count a {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: -webkit-linear-gradient(top, #f0f0f0 0%, #e0e0e0 100%);
+  color: #fff;
+  text-align: center;
+  font-size: 2rem;
+  line-height: 1.1rem;
+  text-decoration: none; }
+  .count a:hover {
+    background: #aaa; }
+
+.count input {
+  height: 1.5rem;
+  border: 0 !important; }
+
+.buy {
+  font-size: 0.8rem;
+  font-weight: 600; }
+
+.pr_card {
+  transition: all .5s; }
+  .pr_card .card-footer > a.btn-primary {
+    background: -webkit-linear-gradient(top, #27b1f6 0%, #0aa1ed 100%) !important; }
+
+.pr_card:hover {
+  box-shadow: 0 0 7px 1px #ccc;
+  z-index: 1000; }
+
+.imgover {
+  overflow: hidden; }
+  .imgover img {
+    transition: all 1s; }
+  .imgover img:hover {
+    transform: scale(1.1); }
+
+.pro_num {
+  margin: 0 6px; }
+
+.pros {
+  padding: 12px 5px 15px; }
+
+.sj .card .card-header {
+  height: 2.37rem; }
+  .sj .card .card-header h6 {
+    line-height: 2.37rem; }
+
+.pr_footer {
+  height: 2.56rem; }
+
+.pagination {
+  float: right;
+  margin: .5rem 1rem 0 0;
+  font-size: 0.75rem; }
+
+.pagination .page-link {
+  padding: .25rem .6rem; }
+
+.pagination li ~ li {
+  margin-left: .5rem; }
+
+.pagination li a {
+  border: 1px solid #ccc;
+  border-radius: .25rem;
+  background: transparent; }
+  .pagination li a:hover {
+    background: transparent;
+    border: 1px solid #0aa1ed; }
+
+.pro_shop .card-header {
+  line-height: 38px;
+  padding-left: 6px !important; }
+  .pro_shop .card-header span {
+    float: right;
+    margin-right: 8px; }
+
+.pro_shop .card-body {
+  border-bottom: 1px dashed #aaa; }
+  .pro_shop .card-body .proId {
+    border-top: 1px dashed #ccc; }
+    .pro_shop .card-body .proId span, .pro_shop .card-body .proId .input-group, .pro_shop .card-body .proId a {
+      font-size: 12px;
+      height: 1rem; }
+    .pro_shop .card-body .proId .input-group {
+      width: 2.8rem;
+      text-align: center !important; }
+      .pro_shop .card-body .proId .input-group a {
+        width: .87rem;
+        color: #fff;
+        line-height: .87rem;
+        font-weight: 800;
+        font-size: 1rem; }
+        .pro_shop .card-body .proId .input-group a:hover {
+          background: #ccc;
+          text-decoration: none; }
+      .pro_shop .card-body .proId .input-group input.form-control {
+        padding: 0;
+        text-align: center !important;
+        border: 0 !important; }
+    .pro_shop .card-body .proId .total_price {
+      width: 5rem; }
+
+.pro_shop a.gobuy {
+  display: block;
+  height: 100%;
+  line-height: 42px;
+  text-align: center;
+  color: #fff;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  background: -webkit-linear-gradient(top, #27b1f6 0%, #0aa1ed 100%);
+  border: 0;
+  float: right; }
+  .pro_shop a.gobuy:hover {
+    background: -webkit-linear-gradient(bottom, #27b1f6 0%, #0aa1ed 100%);
+    text-decoration: none; }
+
+.bg-gray {
+  background: #808080; }
+
+.shop_vartical {
+  padding: 0.5rem !important;
+  font-size: 1.125rem;
+  color: #fff; }
+  .shop_vartical img {
+    vertical-align: middle;
+    margin-right: 0.31rem;
+    margin-bottom: 0.19rem; }
+  .shop_vartical span {
+    margin-left: 0.31rem; }

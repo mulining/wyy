@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>微专业-网易云课堂</title>
+     <!-- 引入文件有先后顺序,注意先后顺序!!!!-->
+     <link rel="stylesheet" href="../project/css/bootstrap.css"/>
+     <script src="../project/js/jquery.min.js"></script>
+     <script src="../project/js/popper.min.js"></script>
+     <script src="../project/js/bootstrap.min.js"></script>
+     <script src="../project/js/vue.js"></script>
+     <!-- 注意先引入子组件 -->
+     <script src="js/dropmenu.js"></script>
+     <script src="js/headerX.js"></script>
+     <script src="js/footer.js"></script>
+     <link rel="stylesheet" href="../project/css/comm.css"/>
+     <link rel="stylesheet" href="../project/css/intro.css">
+     <link rel="stylesheet" href="../project/css/dropmenu.css">
+</head>
+<body>
+    <!-- 头部 -->
+<div id="app" class="container-fluid px-0">
+    <header-menu></header-menu>
+    
+        <!-- 中部大图 -->
+    <div class="centerImg w-100">
+            <!-- <img src="../img/intro/bgtop.jpg" class="w-100"> -->
+    </div>
+    <div class="topnav tab">
+        <ul class="jumbotron d-flex justify-content-around m-0 py-4 bg-white">
+            <li class="text-center cursor_pointer">
+                <img src="../img/intro/list1.png">
+                <p class="mb-0 mt-1">数据分析</p>
+            </li>
+            <li class="text-center cursor_pointer">
+                <img src="../img/intro/list2.png">
+                <p class="mb-0 mt-1">人工智能</p>
+            </li>
+            <li class="text-center cursor_pointer">
+                <img src="../img/intro/list3.png">
+                <p class="mb-0 mt-1">技术开发</p>
+            </li>
+            <li class="text-center cursor_pointer">
+                <img src="../img/intro/list4.png">
+                <p class="mb-0 mt-1">设计&摄影</p>
+            </li>
+            <li class="text-center cursor_pointer">
+                <img src="../img/intro/list5.png">
+                <p class="mb-0 mt-1">产品运营</p>
+            </li>
+        </ul>
+    </div>
+    <!-- 免费直播 -->
+    <div class="live">
+        <div class="tab mt-5">
+            <div class="row mb-3">
+                <h1 class="text_title col-6 mb-0">免费直播</h1>
+            </div>
+            <ul class="row mx-0">
+                <li class="media col-lg-4 col-md-6 col-sm-12 p-3 cursor_pointer rounded">
+                    <img src="../img/index/live_1.jpg" class="circle">
+                    <div class="ml-3">
+                        <p class="my-2">大厂面试必考之深入解析图片缓存框架原理</p>
+                        <p class="text_small text-muted mb-0">讲师: 彭锡 网易特邀安卓高级工程师</p><a href="javascript:;" class="mylive text_small indexcolor pl-4 py-1">进入直播</a>
+                    </div>
+                </li>
+                <li class="media col-lg-4 col-md-6 col-sm-12 p-3 cursor_pointer rounded">
+                    <img src="../img/index/live_1.jpg" class="circle">
+                    <div class="ml-3">
+                        <p class="my-2">大厂面试必考之深入解析图片缓存框架原理</p>
+                        <p class="text_small text-muted mb-0">讲师: 彭锡 网易特邀安卓高级工程师</p><a href="javascript:;" class="mylive text_small indexcolor pl-4 py-1">进入直播</a>
+                    </div>
+                </li>
+                <li class="media col-lg-4 col-md-6 col-sm-12 p-3 cursor_pointer rounded">
+                    <img src="../img/index/live_1.jpg" class="circle">
+                    <div class="ml-3">
+                        <p class="my-2">大厂面试必考之深入解析图片缓存框架原理</p>
+                        <p class="text_small text-muted mb-0">讲师: 彭锡 网易特邀安卓高级工程师</p><a href="javascript:;" class="mylive text_small indexcolor pl-4 py-1">进入直播</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+        <!-- 显示优惠 -->
+        <div class="bg-white">
+            <div class="tab py-5">
+                <div class="row mb-3">
+                    <h1 class="text_title col-6 mb-0">限时优惠</h1>
+                </div>
+                <ul class="favor d-flex justify-content-between">
+                    <li>
+                        <div>
+                            <p class="text-center font-weight-bold mt-5">Python爬虫工程师</p>
+                            <p class="text-center">3个月成为网络爬虫工程师</p>
+                        </div>
+                        <div class="text-center">特惠</div>
+                    </li>
+                    <li>
+                        <div>
+                            <p class="text-center font-weight-bold mt-5">Python爬虫工程师</p>
+                            <p class="text-center">3个月成为网络爬虫工程师</p>
+                        </div>
+                        <div class="text-center">特惠</div>
+                    </li>
+                    <li>
+                        <div>
+                            <p class="text-center font-weight-bold mt-5">Python爬虫工程师</p>
+                            <p class="text-center">3个月成为网络爬虫工程师</p>
+                        </div>
+                        <div class="text-center">特惠</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 微专业 -->
+        <div class="tab">
+            <div class="row mt-5 mb-2">
+                <h1 class="text_title col-6 mb-0 mt-4">推荐微专业</h1>
+                <div class="col-6">
+                </div>
+            </div>
+            <!-- 微专业的 - 使用卡片-->
+            <div class="row wei_card">
+                <!-- 卡片1 -->
+                <div class="col-lg-4 col-md-6 col-sm-12 mt-0 pr-lg-2 pr-md-1 mb-md-2 mb-sm-3 mb-lg-4">
+                    <div class="card rounded hidden hover_scale cursor_pointer">
+                        <div class="card-body p-0 hidden"><img src="../img/index/weiJoin1.webp" class="w-100"></div>
+                        <div class="card-footer px-2 border-top-0 bg-transparent">
+                            <h3 class="f_size_1">Python实用技能</h3>
+                            <p class="text_small text-muted mb-0">职场人必学的Python技能课</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mt-0 pr-lg-2 pr-md-1 mb-md-2 mb-sm-3 mb-lg-4">
+                    <div class="card rounded hidden hover_scale cursor_pointer">
+                        <div class="card-body p-0 hidden"><img src="../img/index/weiJoin2.webp" class="w-100"></div>
+                        <div class="card-footer px-2 border-top-0 bg-transparent">
+                            <h3 class="f_size_1">Java高级开发工程师</h3>
+                            <p class="text_small text-muted mb-0">玩转Java高并发分布式架构核心技术</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mt-0 pr-lg-2 pr-md-1 mb-md-2 mb-sm-3 mb-lg-4">
+                    <div class="card rounded hidden hover_scale cursor_pointer">
+                        <div class="card-body p-0 hidden"><img src="../img/index/weiJoin3.webp" class="w-100"></div>
+                        <div class="card-footer px-2 border-top-0 bg-transparent">
+                            <h3 class="f_size_1">安卓高级开发工程师</h3>
+                            <p class="text_small text-muted mb-0">网易工程师带你突破Android技术瓶颈</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mt-0 pr-lg-2 pr-md-1 mb-md-2 mb-sm-3 mb-lg-4">
+                    <div class="card rounded hidden hover_scale cursor_pointer">
+                        <div class="card-body p-0 hidden"><img src="../img/index/weiJoin4.webp" class="w-100"></div>
+                        <div class="card-footer px-2 border-top-0 bg-transparent">
+                            <h3 class="f_size_1">高级前端开发工程师</h3>
+                            <p class="text_small text-muted mb-0">打通全栈，进阶高级前端开发工程师</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mt-0 pr-lg-2 pr-md-1 mb-md-2 mb-sm-3 mb-lg-4">
+                    <div class="card rounded hidden hover_scale cursor_pointer">
+                        <div class="card-body p-0 hidden"><img src="../img/index/weiJoin1.webp" class="w-100"></div>
+                        <div class="card-footer px-2 border-top-0 bg-transparent">
+                            <h3 class="f_size_1">数据分析师(Python)</h3>
+                            <p class="text_small text-muted mb-0">从零起步，用Python进阶数据分析</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 mt-0 pr-lg-2 pr-md-1 mb-md-2 mb-sm-3 mb-lg-4">
+                    <div class="card rounded hidden hover_scale cursor_pointer">
+                        <div class="card-body p-0 hidden"><img src="../img/index/weiJoin3.webp" class="w-100"></div>
+                        <div class="card-footer px-2 border-top-0 bg-transparent">
+                            <h3 class="f_size_1">互联网运营</h3>
+                            <p class="text_small text-muted mb-0">3个月带你掌握2年大厂运营经验</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 导航+条目 -->
+        <div  class="bodynav">
+            <div class="fixednav bg-white  w-100">
+                <!-- 导航条 -->
+                <ul class="tab nav">
+                    <li class="nav-item py-3 px-5 cursor_pointer active">数据分析</li>
+                    <li class="nav-item py-3 px-5 cursor_pointer">人工智能</li>
+                    <li class="nav-item py-3 px-5 cursor_pointer">技术开发</li>
+                    <li class="nav-item py-3 px-5 cursor_pointer">设计&摄影</li>
+                    <li class="nav-item py-3 px-5 cursor_pointer">产品&运营</li>
+                </ul>
+            </div>
+        </div>
+        <!-- 导航内容 -->
+        <div class="tab mt-3 row pt-4">
+            <div class="bodyitem col-10 p-0 pr-4">
+                <!-- 内容条目1 -->
+                <div class="media bg-white rounded hidden border_shadow hover cursor_pointer">
+                    <div class="w-25">
+                        <img src="../img/intro/wei1.png" class="w-100">
+                    </div>
+                    <div class="w-75 ml-3 mt-3 navcontent">
+                        <h4>Python实用技能&nbsp;-&nbsp;职场人必学的Python技能课</h4>
+                        <p class="text-muted text_small mt-3 cursor_pointer">网易有道每颗豆<span class="text-muted">&nbsp;&nbsp;|&nbsp;&nbsp;</span>共4门课程</p>
+                        <p>网易专家亲授，4大模块，28个专题，50+作业测试，100+代码练习，带你玩转Python！</p>
+                    </div>
+                </div>
+                <!-- 内容条目2 -->
+                <div class="media bg-white rounded hidden border_shadow hover cursor_pointer mt-4">
+                    <div class="w-25">
+                        <img src="../img/intro/wei1.png" class="w-100">
+                    </div>
+                    <div class="w-75 ml-3 mt-3 navcontent">
+                        <h4>Python实用技能&nbsp;-&nbsp;职场人必学的Python技能课</h4>
+                        <p class="text-muted text_small mt-3 cursor_pointer">网易有道每颗豆<span class="text-muted">&nbsp;&nbsp;|&nbsp;&nbsp;</span>共4门课程</p>
+                        <p>网易专家亲授，4大模块，28个专题，50+作业测试，100+代码练习，带你玩转Python！</p>
+                    </div>
+                </div>
+                <!-- 内容条目3 -->
+                <div class="media bg-white rounded hidden border_shadow hover cursor_pointer mt-4">
+                    <div class="w-25">
+                        <img src="../img/intro/wei1.png" class="w-100">
+                    </div>
+                    <div class="w-75 ml-3 mt-3 navcontent">
+                        <h4>Python实用技能&nbsp;-&nbsp;职场人必学的Python技能课</h4>
+                        <p class="text-muted text_small mt-3 cursor_pointer">网易有道每颗豆<span class="text-muted">&nbsp;&nbsp;|&nbsp;&nbsp;</span>共4门课程</p>
+                        <p>网易专家亲授，4大模块，28个专题，50+作业测试，100+代码练习，带你玩转Python！</p>
+                    </div>
+                </div>
+                <!-- 内容条目4 -->
+                <div class="media bg-white rounded hidden border_shadow hover cursor_pointer mt-4">
+                    <div class="w-25">
+                        <img src="../img/intro/wei1.png" class="w-100">
+                    </div>
+                    <div class="w-75 ml-3 mt-3 navcontent">
+                        <h4>Python实用技能&nbsp;-&nbsp;职场人必学的Python技能课</h4>
+                        <p class="text-muted text_small mt-3 cursor_pointer">网易有道每颗豆<span class="text-muted">&nbsp;&nbsp;|&nbsp;&nbsp;</span>共4门课程</p>
+                        <p>网易专家亲授，4大模块，28个专题，50+作业测试，100+代码练习，带你玩转Python！</p>
+                    </div>
+                </div>
+                <!-- 内容条目5 -->
+                <div class="media bg-white rounded hidden border_shadow hover cursor_pointer mt-4">
+                    <div class="w-25">
+                        <img src="../img/intro/wei1.png" class="w-100">
+                    </div>
+                    <div class="w-75 ml-3 mt-3 navcontent">
+                        <h4>Python实用技能&nbsp;-&nbsp;职场人必学的Python技能课</h4>
+                        <p class="text-muted text_small mt-3 cursor_pointer">网易有道每颗豆<span class="text-muted">&nbsp;&nbsp;|&nbsp;&nbsp;</span>共4门课程</p>
+                        <p>网易专家亲授，4大模块，28个专题，50+作业测试，100+代码练习，带你玩转Python！</p>
+                    </div>
+                </div>
+                <!-- 内容条目6 -->
+                <div class="media bg-white rounded hidden border_shadow hover cursor_pointer mt-4">
+                    <div class="w-25">
+                        <img src="../img/intro/wei1.png" class="w-100">
+                    </div>
+                    <div class="w-75 ml-3 mt-3 navcontent">
+                        <h4>Python实用技能&nbsp;-&nbsp;职场人必学的Python技能课</h4>
+                        <p class="text-muted text_small mt-3 cursor_pointer">网易有道每颗豆<span class="text-muted">&nbsp;&nbsp;|&nbsp;&nbsp;</span>共4门课程</p>
+                        <p>网易专家亲授，4大模块，28个专题，50+作业测试，100+代码练习，带你玩转Python！</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 p-0">
+                <!-- 分类筛选 巨幕 -->
+                <div class="shaixuan jumbotron p-3 bg-white border_shadow jumfixed mb-0">
+                    <h6>分类筛选</h6>
+                    <div class="mt-3">
+                        <a href="javascript:;" class="btn btn-primary text_small mb-3">全部</a>
+                        <a href="javascript:;" class="btn btn-outline-primary text_small ml-2 mb-3">数据分析</a>
+                        <a href="javascript:;" class="btn btn-outline-primary text_small">大数据开发</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 底部广告 -->
+        <div class="ads w-100 bg-white my-5">
+            <div class="tab py-5">
+                <h4 class="mb-5">我们的学员在这里工作</h4>
+                <img src="../img/intro/ad.png" class="w-100"></div>
+        </div>
+        <!-- 底部组件 -->
+        <wyfooter></wyfooter>
+</div>
+    <script>
+        new Vue({
+            el:"#app"
+        })
+    </script>
+    
+    <script src="js/intro.js"></script>
+
+</body>
+</html>

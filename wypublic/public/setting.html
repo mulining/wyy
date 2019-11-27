@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>个人认证-主页-网易云课堂</title>
+  <link rel="stylesheet" href="../project/css/bootstrap.css"/>
+    <script src="../project/js/jquery.min.js"></script>
+    <script src="../project/js/popper.min.js"></script>
+    <script src="../project/js/bootstrap.min.js"></script>
+    <script src="../project/js/vue.js"></script>
+    <script src="../project/js/vue-router.js"></script>
+    <script src="../project/js/axios.min.js"></script>
+    <script src="../project/js/config.js"></script>
+    <!-- 引入自己的js功能代码 -->
+    <script src="js/dropmenu.js"></script>
+    <script src="js/headerX.js"></script>
+    <script src="js/navheader.js"></script>
+    <script src="js/footer.js"></script>
+    <link rel="stylesheet" href="../project/css/comm.css"/>
+    <link rel="stylesheet" href="../project/css/user.css">
+    <link rel="stylesheet" href="../project/css/setting.css">
+    <link rel="stylesheet" href="../project/css/footer.css">
+    <link rel="stylesheet" href="../project/css/dropmenu.css">
+</head>
+<body>
+  <div id="app">
+    <header-menu></header-menu>
+
+    <!-- 内容区域 -->
+    <div class="tab userIndexSet beforeTable mb-5">
+      <!-- 中心页面板块 -->
+      <div class="mt-5 beforeTable bg-white boxshadow">
+        <!-- 导航栏 页面-->
+        <!-- 资料设置/收货地址/账号设置/邮件设置 -->
+        <ul class="nav nav-pills border-bottom">
+          <li class="nav-item">
+            <a href="#t1" class="nav-link active" data-toggle="pill">资料设置</a>
+          </li>
+          <li class="nav-item">
+            <a href="#t2" class="nav-link" data-toggle="pill">收货地址设置</a>
+          </li>
+          <li class="nav-item">
+            <a href="#t3" class="nav-link" data-toggle="pill">账号设置</a>
+          </li>
+          <li class="nav-item">
+            <a href="#t4" class="nav-link" data-toggle="pill">邮件设置</a>
+          </li>
+        </ul>
+
+        <!-- 导航页面内容板块 -->
+        <div class="tab-content">
+          <!-- 第一板块 -->
+          <div id="t1" class="tab-pane active">
+            <p class="m-0 text_small px-3">完善个人资料是让别人认识你的第一步</p>
+            <!-- 资料设置 -->
+            <div class="userInfo">
+              <!-- 内容 -->
+              <div class="w-50 px-3">
+                <h5>基本资料</h5>
+                <!-- 使用栅格布局写 -->
+                <div class="row">
+                  <div class="col-3 text-right">
+                    <span>昵称</span>
+                  </div>
+                  <div class="col-9 pl-0">
+                    <input type="text" v-model="obj.unickname" class="">
+                  </div>
+                </div>
+                <!-- 头像上传 -->
+                <div class="row mt-3">
+                  <div class="col-3 text-right">
+                    <span>头像</span>
+                  </div>
+                  <div class="col-9 pl-0 d-flex justify-content-between">
+                    <div class="userInfo_img"><img :src="obj.img" class="w-100"></div>
+                    <div>
+                      <p class="pstyle m-0 text_small px-3">支持jpg、gif、png或bmp格式的图片，建议文件小于20M</p>
+                      <input type="file" class="image pl-3" id="upLoad" title="请上传您的头像">
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 性别 -->
+                <div class="row mt-3">
+                  <div class="col-3 text-right">
+                    <span>性别</span>
+                  </div>
+                  <div class="col-9 pl-0">
+                    <input type="radio" id="man" value="1" :checked="obj.sex==1" name="sex"><label for="man">男</label>
+                    <input type="radio" id="woman" value="0" :checked="obj.sex==0" name="sex" class="ml-2"><label for="woman">女</label>
+                    <input type="radio" id="secret" value="2" :checked="obj.sex==2" name="sex" class="ml-2"><label for="secret">保密</label>
+                  </div>
+                </div>
+
+                <!-- 个人介绍 -->
+                <div class="row mt-3">
+                  <div class="col-3 text-right">
+                    <span>个人介绍</span>
+                  </div>
+                  <div class="col-9 pl-0">
+                      <textarea name="inputtxt" v-model="obj.introself" placeholder="用一段话介绍你自己,会在你的个人页面显示" onfocus="this.placeholder=''" onblur="this.placeholder = '用一段话介绍你自己,会在你的个人页面显示'" style="width: 395px; height: 74px;resize: none;"></textarea>
+                  </div>
+                </div>
+
+                <!-- 联系信息 -->
+                <h5 class="mt-4">联系信息</h5>
+                <!-- 真实姓名 -->
+                <div class="row mt-3">
+                  <div class="col-3 text-right">
+                    <span>真是姓名</span>
+                  </div>
+                  <div class="col-9 pl-0">
+                      <input type="text" v-model="obj.user_name">
+                      <p class="pstyle m-0 text_small">用于高等教育课程证书登记与发放，不会以任何形式向第三方透露</p>
+                  </div>
+                </div>
+                <!-- 常用邮箱 -->
+                <div class="row mt-3">
+                  <div class="col-3 text-right">
+                    <span>常用邮箱</span>
+                  </div>
+                  <div class="col-9 pl-0">
+                      <div v-if="obj.email" class="d-flex">
+                        <div v-text="obj.email"></div>
+                        <a href="javascript:;" class="indexcolor ml-3 text_small align-items-center user_info_alink_mt">修改邮箱</a>
+                      </div>
+                      <input type="text" v-model="obj.email" v-else placeholder="请绑定您的邮箱">
+                      <p class="pstyle m-0 text_small">
+                        <span class="msgImg"></span>
+                        用于接收来自平台和课程的邮件通知，非常重要
+                      </p>
+                  </div>
+                </div>
+                <!-- 手机号码 -->
+                <div class="row mt-3">
+                  <div class="col-3 text-right">
+                    <span>手机号码</span>
+                  </div>
+                  <div class="col-9 pl-0">
+                    <div v-if="obj.phone" class="d-flex">
+                        <div v-text="obj.phone"></div>
+                        <a href="javascript:;" class="indexcolor ml-3 text_small align-items-center user_info_alink_mt">修改手机号</a>
+                    </div>
+                    <input type="text" v-model="obj.phone" v-else placeholder="请绑定您的手机号">
+                    <p class="pstyle m-0 text_small">
+                      <span class="msgImg"></span>
+                      用于优质课程的学习提醒等服务，手机号不会对外公开，请放心
+                    </p>
+                  </div>
+                </div>
+
+                <!-- qq号码 -->
+                <div class="row mt-3">
+                    <div class="col-3 text-right">
+                      <span>QQ号码</span>
+                    </div>
+                    <div class="col-9 pl-0">
+                      <input type="text" v-model="obj.qq" placeholder="请绑定您的qq号码">
+                      <p class="pstyle m-0 text_small">
+                        用于课程的高效交流、方便机构及老师答疑解惑
+                      </p>
+                    </div>
+                  </div>
+              </div>
+
+              <!-- 底部保存 -->
+              <div class="userInfoFooter">
+                <button class="btn btn-lg btn-success" @click="submitUserInfo()">保存</button>
+              </div>
+            </div>
+          </div>
+          <!-- 第二板块 -->
+          <div id="t2" class="tab-pane">
+            <!-- 第二板块内容 -->
+            <div class="ml-2 text_small">
+              <div class="row mt-4">
+                <div class="col-1 text-right">
+                  <span>收货人</span>
+                </div>
+                <div class="col-11 pl-0">
+                  <input type="text" placeholder="真是姓名">
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col-1 text-right">
+                  <span>手机号码</span>
+                </div>
+                <div class="col-11 pl-0">
+                  <input type="phone" placeholder="11位手机号">
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col-1 text-right">
+                  <span>所在地区</span>
+                </div>
+                <div class="col-11 pl-0">
+                  <!-- 级联菜单 -->
+                  <select class="sheng">
+                    <option>请选择</option>
+                  </select>
+                  <!-- <select class="shi"></select>
+                  <select class="qu"></select> -->
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col-1 text-right">
+                  <span>详细地址</span>
+                </div>
+                <div class="col-11 pl-0">
+                    <textarea name="inputtxt" placeholder="街道.小区门牌等详细地址" onfocus="this.placeholder=''" onblur="this.placeholder = '街道.小区门牌等详细地址'" style="width: 395px; height: 74px;resize: none;"></textarea>
+                </div>
+              </div>
+            </div>
+            <!-- 第二板块的底部 -->
+            <div class="p-3" style="height:100px;padding:33px 0px 0px 100px !important;">
+              <button class="btn btn-success" style="border-radius: 0;padding-left: 30px;padding-right: 30px;">保存</button>
+              <button class="btn btn-light ml-3" style="border-radius: 0;padding-left: 30px;padding-right: 30px;">取消</button>
+            </div>
+          </div>
+          <!-- 第三板块 -->
+          <div id="t3" class="tab-pane text_small">
+            <!-- 第三板块-内容区域 -->
+            <div class="w-50">
+              <!-- 当前登录账号提醒 -->
+              <div class="row px-3 py-4">
+                <div class="col-3 text-right">当前登录账号</div>
+                <div class="col-9 text-muted">
+                  <p class="m-0">昵称(腾讯QQ账号)<span class="indexcolor cursor_pointer ml-3">修改密码</span></p>
+                  <p class="m-0 mt-1">学习记录以当前账号为准</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- 第四板块 -->
+          <div id="t4" class="tab-pane">
+              <p class="m-0 text_small px-3">他人在我的个人主页所能看到的内容：</p>
+              <div class="p-3">
+                <!-- 设置权限 - 是否让他人看到你在学习过程中的课程和计划 -->
+                <input type="checkbox" name="checkLimit"  v-model="otherfindlimit" @change="Limitchange" id="checkLimit" class="mr-2"><label for="checkLimit" style="vertical-align: middle;">在学的课程或计划</label>
+                <!-- 底部保存 -->
+                <div class="userInfoFooter">
+                  <button class="btn btn-lg btn-success" @click="submitUserLimit()">保存</button>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <wyfooter></wyfooter>
+  </div>
+  <!-- 引入js功能性文件 -->
+  <script src="./js/setting_test.js"></script>
+  <script src="./js/setting.js"></script>
+  <script>
+
+  var vm=new Vue({
+    el:"#app",
+    data:{
+      // 修改整合数据
+      // 使用一个对象,将保存所有数据
+      obj:{},
+      otherfindlimit:false,
+    },
+  created() {
+    this.userdata()
+  },
+  methods: {
+    // 当加载组件时,请求用户数据
+    // 是为页面数据的加载提供请求的
+    userdata(){
+      axios.defaults.baseURL=config.baseUrl;
+      var url= "/wyuser/userInfos";
+      axios.get(url)
+        .then(res=>{
+          console.log(res);
+          // var {unickname,phone,email,img,qq,sex,introself,user_name} = res.data.data;
+            if(res.data.code == 1){
+                // 登录成功
+                this.isLogin = true;
+                // var nickname = res.data.data[0].unickname;
+                // var userimg = res.data.data[0].img;
+                // if(unickname){this.nickname = unickname;}
+                // if(img){this.userimg = img;}
+                // if(phone){
+                //   this.isPhone = true;
+                //   this.phone = phone;}
+                // if(email){
+                //   this.isEmail = true;
+                //   this.userEmail = email;
+                // }
+                // if(qq){this.qq = qq;}
+                // if(sex){this.sex = sex}
+                // if(introself){this.introself = introself};
+                // if(user_name){this.user_name = user_name;}
+                this.obj = res.data.data;
+                if(this.obj.otherfindlimit == 1){this.otherfindlimit = true;}
+                else{this.otherfindlimit = false;}
+                console.log(this.obj);
+            }else{
+                this.isLogin = false;
+                alert("您已经掉线,请尝试重新登录再修改,如还未能解决问题,请及时与我们联系,谢谢!");
+                window.location.href= "index.html";
+            }
+        })
+        .catch(err=>{
+            console.log(err);
+        });
+    },
+
+
+    // 上传数据方法
+    submitUserInfo(){
+      // 使用正则 验证数据
+      // 提交不为空的数据信息
+      // 使用axios提交数据
+      var data = this.obj;
+      axios.get("/wyuser/userInfoSub",{params:data})
+      .then(res=>{
+        console.log(res);
+        if(res.data.code == 1){
+          alert("修改成功!");
+          window.location.reload();
+        }else if(res.data.code == -1){
+          alert("您已经掉线,请重新登录!");
+        }else if(res.data.code == -2){
+          alert("很抱歉,您的个人信息修改失败!请尝试重新提交修改信息!谢谢");
+        }
+      })
+      .catch(err=>{
+        console.log(err);
+      })
+    },
+    
+    // 提交用户权限数据 -- 是否允许他人查看自己的学习课程或计划
+    submitUserLimit(){
+      var url = "/wyuser/otherfindlimit";//接口路由
+      var otherfindlimit = this.obj.otherfindlimit;
+      var obj = {otherfindlimit};
+      axios.get(url,{params:obj})
+      .then(res=>{
+        console.log(res);
+        if(res.data.code == 1){
+          window.location.reload();
+        }else{
+          alert("提交失败,请尝试重新提交!");
+        }
+      })
+      .catch(err=>{
+        console.log(err);
+      });
+    },
+
+    // 当检测到数据变化时,调用
+    Limitchange(){
+      this.otherfindlimit = !this.obj.otherfindlimit;
+      this.obj.otherfindlimit = this.otherfindlimit?1:0;
+    },
+  },
+})
+  </script>
+</body>
+</html>

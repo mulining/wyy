@@ -1,0 +1,240 @@
+@charset "UTF-8";
+.row:first-child .breadcrumb .breadcrumb-item a {
+  font-size: 14px; }
+
+.row:first-child .breadcrumb {
+  padding: 0; }
+
+.logo img {
+  width: 12.625rem;
+  height: 3.44rem; }
+
+.search_box {
+  border: 1px solid #ccc;
+  border-radius: 1.25rem;
+  overflow: hidden; }
+  .search_box span {
+    line-height: 1.4rem;
+    color: #666;
+    cursor: pointer; }
+    .search_box span:hover {
+      color: #49af4f !important; }
+  .search_box button {
+    background: #49af4f;
+    color: #fff;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    line-height: 1.4rem; }
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: ""; }
+
+.breadcrumb {
+  background: transparent; }
+
+.breadcrumb-item a img {
+  vertical-align: middle; }
+
+.row .col-sm-12:nth-child(2), .row .col-sm-12:last-child {
+  margin-top: 0.5rem; }
+
+.circle_img > a {
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 50%; }
+
+.info a {
+  color: #333;
+  text-decoration: none; }
+  .info a:hover {
+    color: #49af4f; }
+
+.log::before {
+  content: "";
+  display: inline-block;
+  margin-right: 13px;
+  vertical-align: middle;
+  width: 3px;
+  background: #ccc; }
+
+ul.wy_nav li {
+  position: relative; }
+
+ul.wy_nav > li:hover a.menu {
+  color: #49af4f !important;
+  text-decoration: none; }
+  ul.wy_nav > li:hover a.menu::before {
+    content: '';
+    width: 24%;
+    height: 3px;
+    background: #49af4f;
+    border-radius: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -12px; }
+
+.wynav_active::before {
+  content: '';
+  width: 24px;
+  height: 3px;
+  background: #49af4f;
+  border-radius: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -24px; }
+
+.wynav_active a {
+  text-decoration: none;
+  color: #49af4f !important; }
+
+.dropdown-menu {
+  top: 80%;
+  left: 6px;
+  min-width: 100px; }
+
+.fenlei_hover:hover .dropdown-menu {
+  display: block; }
+
+.wy_mav_r a:hover {
+  text-decoration: none;
+  color: #49af4f !important; }
+
+.app {
+  position: relative; }
+  .app .app_box {
+    display: none !important;
+    position: absolute;
+    left: -7.94rem;
+    top: 2.19rem;
+    width: 22rem;
+    background: white;
+    z-index: 1000;
+    box-shadow: 0 0 10px -5px #000; }
+  .app:hover .app_box {
+    display: block !important;
+    z-index: 1000; }
+
+.downicon {
+  display: inline-block;
+  width: 20px;
+  height: 100%;
+  line-height: 1rem;
+  vertical-align: middle;
+  background: url(../../img/index/top-down.png);
+  background-size: 100%; }
+
+.search_box span:first-child:hover .downicon {
+  background: url(../../img/index/blue-down.png);
+  background-size: 100%; }
+
+.header_lingdang_icon, .header_shop_icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle; }
+
+.header_lingdang_icon {
+  background: url("../../img/index/lingdang_default_icon.png") no-repeat;
+  background-size: cover; }
+
+.header_lingdang_icon:hover {
+  background: url("../../img/index/lingdang_selected_icon.png") no-repeat;
+  background-size: cover; }
+
+.header_shop_icon {
+  background: url("../../img/index/cart_default_icon.png") no-repeat;
+  background-size: cover; }
+
+.header_shop_icon:hover {
+  background: url("../../img/index/cart_selected_icon.png") no-repeat;
+  background-size: cover; }
+
+.indexsearchbox {
+  position: relative; }
+
+.indexsearchbox .dropdown {
+  position: absolute;
+  z-index: 10;
+  border-radius: 2px;
+  overflow: hidden;
+  left: 72px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15); }
+
+.indexsearchbox .dropdown-item.active, .dropdown-item:active {
+  background: #F5F5F5; }
+
+.alertBox {
+  position: absolute;
+  right: 25px;
+  top: 35px;
+  background: #fff;
+  z-index: 1000;
+  display: none; }
+
+.alertBox ul {
+  width: 170px;
+  padding: 5px; }
+
+.alertBox ul li {
+  padding: 5px 8px;
+  cursor: pointer; }
+
+.alertBox ul li a {
+  color: rgba(42, 42, 42, 0.8);
+  font-size: 12px; }
+
+.alertBox ul li:first-child, .alertBox ul li:nth-child(5) {
+  border-bottom: 1px solid #eee; }
+
+.alertBox ul li > span {
+  color: #ff9600;
+  /*金黄色*/
+  font-size: 12px; }
+
+.alertBox ul li:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  overflow: hidden; }
+
+.alertBox ul li:hover {
+  background: rgba(204, 204, 204, 0.1); }
+
+li.circle_img:hover .alertBox {
+  display: block; }
+
+/* 三角制作 */
+.alertBox .sj {
+  position: absolute;
+  top: -10px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #fff;
+  border-left: 5px solid transparent; }
+
+.animation_Courselabel {
+  position: absolute;
+  top: -23px;
+  left: 225px;
+  z-index: 1002;
+  width: 40px;
+  height: 24px;
+  background: url("../../img/edu-image/anmitionNewCourse.png") no-repeat;
+  font-size: 12px;
+  color: white;
+  text-align: center;
+  animation: moveLabel 0.8s ease-in-out 1s infinite alternate;
+  transition: top 0.8s; }
+
+@keyframes moveLabel {
+  0% {
+    top: -23px; }
+  100% {
+    top: -15px; } }

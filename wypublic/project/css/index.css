@@ -1,0 +1,197 @@
+.header_r1:first-child .breadcrumb .breadcrumb-item a {
+  font-size: 14px; }
+
+body {
+  background: #fff; }
+
+.logo img {
+  width: 12.625rem;
+  height: 3.44rem; }
+
+.info .breadcrumb-item + .breadcrumb-item::before {
+  content: ""; }
+
+.info .breadcrumb {
+  background: transparent; }
+
+.info .breadcrumb-item a img {
+  vertical-align: middle; }
+
+.info .circle_img > a {
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 50%; }
+
+.info a {
+  color: #333;
+  text-decoration: none; }
+  .info a:hover {
+    color: #49af4f; }
+
+.header_r1 .col-sm-12:nth-child(2), .row .col-sm-12:last-child {
+  margin-top: 0.5rem; }
+
+.log::before {
+  content: "";
+  display: inline-block;
+  margin-right: 13px;
+  vertical-align: middle;
+  width: 3px;
+  background: #ccc; }
+
+ul.wy_nav li {
+  position: relative; }
+
+ul.wy_nav > li:hover a.menu {
+  color: #49af4f !important;
+  text-decoration: none; }
+  ul.wy_nav > li:hover a.menu::before {
+    content: '';
+    width: 24%;
+    height: 3px;
+    background: #49af4f;
+    border-radius: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -12px; }
+
+.wynav_active::before {
+  content: '';
+  width: 24px;
+  height: 3px;
+  background: #49af4f;
+  border-radius: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -24px; }
+
+.wynav_active a {
+  text-decoration: none;
+  color: #49af4f !important; }
+
+.dropdown-menu {
+  top: 80%;
+  left: 6px;
+  min-width: 100px; }
+
+.fenlei_hover:hover .dropdown-menu {
+  display: block; }
+
+.fenlei_hover .dropdown-menu li:hover a {
+  color: #000 !important; }
+
+.wy_mav_r a:hover {
+  text-decoration: none;
+  color: #49af4f !important; }
+
+.app {
+  position: relative; }
+  .app .app_box {
+    display: none !important;
+    position: absolute;
+    left: -7.94rem;
+    top: 2.19rem;
+    width: 22rem; }
+  .app:hover .app_box {
+    display: block !important; }
+
+.more {
+  width: 1.125rem;
+  height: 1.125rem;
+  background: url(../../img/index/sprite.png) no-repeat -1px -1674px; }
+
+.live_more:hover .more {
+  background: url(../../img/index/sprite.png) no-repeat -1px -1691px; }
+
+.live_more:hover span {
+  color: #49af4f !important; }
+
+.f_size_1 {
+  font-size: 1rem; }
+
+.wei_card .card img {
+  transition: all .5s; }
+
+.kill_title1 {
+  font-size: 0.875rem; }
+
+.kill-nav .nav-item .nav-link {
+  border-radius: 0 !important; }
+
+.kill-nav .active {
+  background: #49af4f !important; }
+
+.kill-nav a {
+  font-size: 0.875rem;
+  color: #666;
+  background: rgba(73, 175, 79, 0.1); }
+  .kill-nav a:hover {
+    background: #49af4f !important;
+    color: white; }
+
+.like_change::after {
+  content: '>';
+  margin-left: .3rem; }
+
+.like_bg {
+  background: rgba(73, 175, 79, 0.1) !important; }
+
+.like_title {
+  font-size: 0.875rem !important; }
+
+.scries {
+  width: 85%;
+  height: 50%;
+  top: 25%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border: 3px solid #ffffff;
+  padding: 1px; }
+
+.scries_inner {
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9) !important; }
+  .scries_inner::before {
+    content: "";
+    display: table; }
+  .scries_inner h3 {
+    font-size: 1.125rem; }
+
+.login.modal {
+  width: 27.5rem;
+  margin: auto !important; }
+  .login.modal .modal-body a {
+    color: #aaa !important; }
+  .login.modal .modal-body .nav .active {
+    color: #000 !important;
+    border-bottom: 2px solid #49af4f !important; }
+  .login.modal .mess_link {
+    padding: 0 0 0 34px;
+    background: url(../../img/index/login1.png) no-repeat -380px -385px; }
+  .login.modal .nav .nav-item {
+    font-size: 1.25rem; }
+  .login.modal .u_logo_img {
+    padding-top: 0.69rem;
+    width: 2.25rem;
+    height: 2.75rem; }
+  .login.modal .phone_logo {
+    width: 1.2rem;
+    height: 2rem;
+    background: url(../../img/index/login1.png) no-repeat 0 -78px; }
+
+.login_bgimg {
+  background: url(../../img/index/login03.png); }
+
+.logininfor::after {
+  content: '|';
+  margin-left: 0.5rem;
+  margin-right: 0.5rem; }
+
+.fenlei_hover:hover .dropdown_menu {
+  display: block;
+  z-index: 1000;
+  left: 5px; }

@@ -1,0 +1,47 @@
+网易云主页数据库分析wyy: 
+
+轮播图数据表slide(sl_id,sl_title,sl_img[varchar](图片路径),sl_alink(图片超链接)[varchar])
+
+用户表user(u_id,unickname,uname,upwd,user_name,phone,email,regtime(注册时间))(注册,登录,信息表)
+
+购物车表buy(b_id,h_id(外键兴趣课程id),u_id(外键用户id),price(课程单价),cname(课程名称),count(数量))
+
+用户课程表course(c_id,h_id(外键兴趣课程id),u_id(外键用户id))
+
+系统化学习表system(sys_id,sys_title,sys_img,sys_alink(图片超链接))(图片/文字)
+
+课堂直播表live(l_id,l_title,l_intro,l_livetime(开课时间),l_img,l_link)
+
+微专业表
+专业(major)分类表(m_id,m_class,m_no(所属编号))
+
+限时秒杀（kill）
+(id,title,teacher(授课老师),kprice(秒杀价格),price(原价),count(记录剩余席位的),img,link,start(开始时间),end(结束时间),class)
+
+
+
+兴趣推荐表:
+  前端开发(web)
+（id,title,intro,img,link, ，class）
+  系列课程(series)
+  (id,title,intro,img,link,class)
+  精选好课(choiceness)
+  (id,title,intro,img,link,class)
+  新课推荐(recommend)
+  (id,title,intro,img,link,class)
+  免费好课(free)
+  (id,title,intro,img,link,class)
+
+
+底部广告表
+ad(id,title,img,link,time(图片上架时间))
+
+
+
+
+
+
+
+
+
+

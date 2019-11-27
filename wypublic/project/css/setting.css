@@ -1,0 +1,58 @@
+.userIndexSet {
+  padding-top: 60px;
+  box-shadow: 0 0; }
+  .userIndexSet .nav-pills .nav-link {
+    color: #000;
+    font-weight: 600;
+    padding-left: 25px;
+    padding-right: 25px; }
+  .userIndexSet .nav-pills .nav-link.active {
+    border-radius: 0;
+    background: #49af4f;
+    color: #fff; }
+  .userIndexSet #t1 > p, .userIndexSet #t2 > p, .userIndexSet #t3 > p, .userIndexSet #t4 > p {
+    line-height: 50px;
+    color: #ccc; }
+  .userIndexSet #t1, .userIndexSet #t2, .userIndexSet #t3, .userIndexSet #t4 {
+    min-height: 600px; }
+
+.boxshadow {
+  box-shadow: 0px 1px 2px #bbb; }
+
+.userInfo .userInfo_img {
+  width: 120px;
+  height: 120px;
+  background: #ccc; }
+
+.userInfo p.pstyle {
+  line-height: 25px !important;
+  font-size: 12px;
+  padding-right: 0 !important; }
+
+.msgImg {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url(../../img/user/common/msg.png) no-repeat;
+  background-position: -18px 1px;
+  vertical-align: middle; }
+
+.user_info_alink_mt {
+  margin-top: 3px; }
+
+.userInfoFooter {
+  height: 84px;
+  padding: 20px 0 0 108px;
+  border-top: 1px solid #eaeaea;
+  background-color: #fafafa; }
+  .userInfoFooter button.btn {
+    border-radius: 0;
+    padding-left: 25px;
+    padding-right: 25px;
+    box-shadow: 2px 2px 2px 0px #bbb; }
+
+#t4 .userInfoFooter {
+  height: 50px;
+  padding: 0;
+  border: 0;
+  background-color: #fff; }
